@@ -9,8 +9,6 @@ phases:
       - . venv/bin/activate
       - pip install -r requirements.txt
   build:
-    runtime-versions:
-      python: 3.10
     commands:
       - flake8 --exclude=venv* --statistics
       - pytest -v --cov=calculator
